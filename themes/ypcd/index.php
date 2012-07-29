@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-      <meta charset="utf-8" />
-        
-      <title></title>
-
-      <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-      <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
-      <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/javascripts/jquery-1.7.2.min.js"></script>
-      <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/javascripts/jquery.instagram.js"></script>
-  </head>
-
+  <?php get_header( $name ); ?>
   <body>
-      <div class="instagram"></div>
+      <div class="instagram">
+	      <div class="instagram">
+		    <script type="text/javascript">
+			$(function() {
+			$(".instagram").instagram({
+			hash: 'love' , clientId: '9ea65159a89141ceab09c004b157c5cd'
+			});
+			});
+			</script>
+      </div>
   </body>
 </html>
