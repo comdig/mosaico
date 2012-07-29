@@ -4,3 +4,18 @@ Description: Wordpress theme for a Instagram application.
 Author: Bruno Stein, Jeferson Braun
 License: DWTFYW
 */
+
+.instagram {
+	position: absolute;
+	width: 960px;
+	height: 960px;
+}
+
+.instagram img {
+	float: left;
+}
+
+.mascara {
+	position: absolute;
+	z-index: 4;
+}

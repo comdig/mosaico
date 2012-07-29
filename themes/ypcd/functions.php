@@ -36,6 +36,23 @@ function register_my_taxonomies() {
     )
   );
 
+	/* Status */
+
+  register_taxonomy(
+    'status',
+    array(''),
+    array(
+      'hierarchical' => true,
+      'public' => true,
+      'query_var' => true,
+      'rewrite' => true,
+      'labels' => array(
+        'name' => __( 'Status' ),
+        'singular_name' => __( 'Status' )
+      ),
+    )
+  );
+
 };
 
 /* Cria tipos de publicação */
@@ -56,7 +73,7 @@ function create_post_type() {
       'rewrite' => array('slug' => 'missoes'),
       'supports' => array('title', 'editor', 'thumbnail', 'comments'),
       'menu_position' => 4,
-      'taxonomies' => array('hashtag', 'mascara')
+      'taxonomies' => array('status', 'hashtag', 'mascara')
     )
   );
 

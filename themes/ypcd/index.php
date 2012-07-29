@@ -35,7 +35,6 @@
 
       });
     </script>
-
-    <div class="instagram"></div>
+    <div class="instagram"></div>    
   </body>
 </html>
