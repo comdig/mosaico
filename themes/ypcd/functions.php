@@ -55,7 +55,7 @@ function create_post_type() {
       'has_archive' => true,
       'rewrite' => array('slug' => 'missoes'),
       'supports' => array('title', 'editor', 'thumbnail', 'comments'),
-      'menu_position' => 2,
+      'menu_position' => 4,
       'taxonomies' => array('hashtag', 'mascara')
     )
   );
