@@ -9,8 +9,8 @@
       <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
       <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-      <script type="text/javascript" src="jquery.instagram.js"></script>
-      <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+      <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/javascripts/jquery-1.7.2.min.js"></script>
+      <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/javascripts/jquery.instagram.js"></script>
   </head>
 
   <body>
