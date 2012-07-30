@@ -19,7 +19,7 @@
             };
 
             insta_container.instagram({
-              hash: '<?php the_title(); ?>',
+              hash: '<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?>',
               clientId : '9ea65159a89141ceab09c004b157c5cd',
               show : 20,
               onComplete : function (photos, data) {
@@ -28,10 +28,10 @@
             });
 
             function loop(){
-              if (i == 10) {
+              if (i == 15) {
                 clearTimeout(loader);
               } else {
-                var loader = setTimeout(loadImages(), 300);
+                var loader = setTimeout(loadImages(), 100);
               }
             }
 

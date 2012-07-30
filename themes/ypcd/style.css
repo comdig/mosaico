@@ -11,7 +11,7 @@ body {
 }
 
 .instagram {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 	width: 1160px;
@@ -32,5 +32,5 @@ body {
   width: 1160px;
   height: 360px;
 	z-index: 2;
-  opacity: .65;
+  opacity: .40;
 }

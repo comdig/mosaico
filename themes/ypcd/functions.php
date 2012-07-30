@@ -69,12 +69,12 @@ function create_post_type() {
       global $post;
       $custom = get_post_custom($post->ID);
       $hashtag = $custom["hashtag"][0]; ?>
-      <textarea rows="1" name="new_hashtag" tabindex="6" id="new-hashtag"><?php echo $hashtag; ?></textarea>
+      <textarea rows="1" name="newHashtag" tabindex="6" id="newHashtag"><?php echo $hashtag; ?></textarea>
     <?php }
     
     add_action('save_post', 'save_details');
     
-    function save_details(){ global $post; update_post_meta($post->ID, "hashtag", $_POST["new_hashtag"]); }
+    function save_details(){ global $post; update_post_meta($post->ID, "hashtag", $_POST["newHashtag"]); }
 
 };
 
