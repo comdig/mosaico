@@ -19,23 +19,6 @@ function my_remove_menu_pages() {
 add_action( 'init', 'register_my_taxonomies', 0 );
 function register_my_taxonomies() {
     
-  /* Hashtag */
-
-  register_taxonomy(
-    'hashtag',
-    array(''),
-    array(
-      'hierarchical' => true,
-      'public' => true,
-      'query_var' => true,
-      'rewrite' => true,
-      'labels' => array(
-        'name' => __( 'Hashtags' ),
-        'singular_name' => __( 'Hashtag' )
-      ),
-    )
-  );
-
 	/* Status */
 
   register_taxonomy(
@@ -73,9 +56,25 @@ function create_post_type() {
       'rewrite' => array('slug' => 'missoes'),
       'supports' => array('title', 'editor', 'thumbnail', 'comments'),
       'menu_position' => 4,
-      'taxonomies' => array('status', 'hashtag', 'mascara')
+      'taxonomies' => array('status', 'mascara')
     )
   );
+
+    /* Cria campo de texto para Hashtags */
+    add_action("admin_menu", "admin_menu");
+     
+    function admin_menu(){ add_meta_box("hashtag", "Hashtag da miss&atilde;o", "hashtag", "ypcd_missoes", "normal", "high"); }
+     
+    function hashtag() {
+      global $post;
+      $custom = get_post_custom($post->ID);
+      $hashtag = $custom["hashtag"][0]; ?>
+      <textarea rows="1" name="new_hashtag" tabindex="6" id="new-hashtag"><?php echo $hashtag; ?></textarea>
+    <?php }
+    
+    add_action('save_post', 'save_details');
+    
+    function save_details(){ global $post; update_post_meta($post->ID, "hashtag", $_POST["new_hashtag"]); }
 
 };
 
