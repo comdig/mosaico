@@ -1,4 +1,4 @@
-  <?php get_header( $name ); ?>
+  <?php get_header(); ?>
 
   <body>
     <?php query_posts(array('post_type' => 'ypcd_missoes')); ?>
@@ -30,6 +30,7 @@
             function loop(){
               if (i == 15) {
                 clearTimeout(loader);
+                $('.hide').fadeOut(1500);
               } else {
                 var loader = setTimeout(loadImages(), 100);
               }
@@ -38,8 +39,13 @@
           });
         </script>
 
-        <div class="instagram"></div>
-        <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title(); ?>" />
+        <div class="mosaic">
+          <div class="hide">
+            <p>Calma aí, o seu mosaico está sendo carregado.</p>
+          </div>
+          <div class="instagram"></div>
+          <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title(); ?>" />
+        </div>
       <?php endwhile; endif; ?>
     <?php wp_reset_query(); ?>
   </body>
