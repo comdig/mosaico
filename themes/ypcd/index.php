@@ -48,5 +48,4 @@
         </div>
       <?php endwhile; endif; ?>
     <?php wp_reset_query(); ?>
-  </body>
-</html>
+<?php get_footer(); ?>

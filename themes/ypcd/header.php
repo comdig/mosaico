@@ -15,3 +15,5 @@
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/jquery.instagram.js"></script>
   </head>
+  
+  <body>

@@ -1,12 +1,12 @@
 <?php
 /**
-* Template Name: Missões atuais
+* Template Name: Missões anteriores
 * Description: Modelo de página que exibe as missões que estão acontecendo nesse momento.
 */
 get_header(); ?>
 
 <div id="content" class="">
-    <?php query_posts(array('post_type' => 'ypcd_missoes', 'status' => 'atuais')); ?>
+    <?php query_posts(array('post_type' => 'ypcd_missoes', 'status' => 'anteriores')); ?>
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post">
 			<h2 id="post-<?php the_ID(); ?>"><?php the_title();?></h2>
