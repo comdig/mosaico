@@ -111,4 +111,8 @@ function ypcd_missoes_icons() { ?>
   </style>
 <?php }
 
+/* Adicionar nav_menus */
+
+	register_nav_menu( 'principal', __( 'Menu Principal') );
+
 ?>

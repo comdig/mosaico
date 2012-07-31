@@ -5,7 +5,7 @@
 */
 get_header(); ?>
 
-<div id="content" class="">
+<div id="" class="">
     <?php query_posts(array('post_type' => 'ypcd_missoes', 'status' => 'atuais')); ?>
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post">

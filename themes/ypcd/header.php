@@ -16,4 +16,12 @@
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/jquery.instagram.js"></script>
   </head>
   
+	<div id="header">
+		<h1 id="">
+			<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+		</h1>
+		<div class="">
+			<?php wp_nav_menu( array( 'principal' ) ); ?>
+		</div>
+	</div>  
   <body>
