@@ -20,7 +20,7 @@ add_action( 'init', 'register_my_taxonomies', 0 );
 function register_my_taxonomies() {
     
 	/* Status */
-
+  /*
   register_taxonomy(
     'status',
     array(''),
@@ -35,6 +35,7 @@ function register_my_taxonomies() {
       ),
     )
   );
+  */
 
 };
 
@@ -56,7 +57,7 @@ function create_post_type() {
       'rewrite' => array('slug' => 'missoes'),
       'supports' => array('title', 'editor', 'thumbnail', 'comments'),
       'menu_position' => 4,
-      'taxonomies' => array('status', 'mascara')
+      'taxonomies' => array(/*'status', */'mascara')
     )
   );
 
