@@ -79,12 +79,13 @@ list-style-type: disc;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     overflow: hidden;
   }
     .instagram img {
 	  float: left;
       width: 40px;
+      opacity: .60;
     }
 
   .mask {
@@ -93,8 +94,7 @@ list-style-type: disc;
     left: 0;
     width: 100%;
     height: 100%;
-  	z-index: 2;
-    opacity: .40;
+  	z-index: 1;
   }
   
   
