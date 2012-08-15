@@ -5,10 +5,15 @@ Author: Bruno Stein, Jeferson Braun
 License: DWTFYW
 */
 
+@font-face {
+  font-family: Regular;
+  src: url(fonts/GillSans.ttc)
+}
+
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: helvetica, arial;
+  font-family: GillSans;
   width: 1200px;
   background: #ededed;
 }
