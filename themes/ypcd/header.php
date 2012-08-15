@@ -22,5 +22,5 @@
 		<div id="logo">
 			<a href="<?php bloginfo('url'); ?>"></a>
 		</div>
-	</div>  
-  <body>
+	</div>
+	<body>

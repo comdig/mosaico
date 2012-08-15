@@ -1,7 +1,6 @@
   <?php get_header(); ?>
-
-  <body>
-    <?php query_posts(array('post_type' => 'ypcd_missoes')); ?>
+  			
+    <?php query_posts(array('posts_per_page' => 1, 'post_type' => 'ypcd_missoes')); ?>
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <script type="text/javascript">
           $(function(){

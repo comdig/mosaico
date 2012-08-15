@@ -94,15 +94,13 @@ list-style-type: disc;
 #nav li:first-child:before { content:''; }*/
 
 #hash {
-	/* HASHTAG que aparece dentro da div do logo */
 	position: absolute;
+	width: 400px;
 	color: white;
-	top: 375px;
-	left: 200px;
+	top: 425px;
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: lighter;
-	padding: 0 6px;
 }
 
 .menu-principal-container {
