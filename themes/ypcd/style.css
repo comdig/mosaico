@@ -34,15 +34,6 @@ list-style-type: disc;
 
 /* Mosaics */
 
-/*BACKUP
-.mosaic {
-  position: relative;
-  width: 1160px;
-  height: 360px;
-  margin: 0 auto;
-}
-*/
-
 .mosaic {
   position: relative;
   width: 800px;
@@ -101,6 +92,18 @@ list-style-type: disc;
 
 /*#nav li:before { content:' / '; }
 #nav li:first-child:before { content:''; }*/
+
+#hash {
+	/* HASHTAG que aparece dentro da div do logo */
+	position: absolute;
+	color: white;
+	top: 375px;
+	left: 200px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: lighter;
+	padding: 0 6px;
+}
 
 .menu-principal-container {
   padding: 33px 0;
