@@ -38,7 +38,8 @@
 
           });
         </script>
-
+        
+        <p id="hash">#<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?></p>
 		<ul id="menu-social">
 			<li id="twitter"><a href="http://twitter.com"></a></li>
 			<li id="facebook"><a href="http://fb.com"></a></li>
