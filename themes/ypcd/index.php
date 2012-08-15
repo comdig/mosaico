@@ -1,7 +1,7 @@
   <?php get_header(); ?>
 
   <body>
-    <?php query_posts(array('post_type' => 'ypcd_missoes', 'status' => 'atuais')); ?>
+    <?php query_posts(array('post_type' => 'ypcd_missoes')); ?>
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <script type="text/javascript">
           $(function(){
@@ -38,6 +38,13 @@
 
           });
         </script>
+
+		<ul id="menu-social">
+			<li id="twitter"><a href="http://twitter.com"></a></li>
+			<li id="facebook"><a href="http://fb.com"></a></li>
+			<li id="instagram"><a href="http://instagram.com"></a></li>
+			<li id="twitter"><a href="http://twitter.com"></a></li>
+		</ul>
 
         <div class="mosaic">
           <div class="hide">

@@ -10,6 +10,7 @@ body {
   padding: 0;
   font-family: helvetica, arial;
   width: 1200px;
+  background: #ededed;
 }
 
 #logo {
@@ -44,9 +45,9 @@ list-style-type: disc;
 
 .mosaic {
   position: relative;
-  width: 700px;
+  width: 800px;
   height: 500px;
-  margin-left: 400px;
+  float: right;
 }
 
   .hide {
@@ -134,15 +135,36 @@ list-style-type: disc;
 		float: left;
 	}
 
-.menu-social-container {
+#menu-social {
+	position: absolute;
 	width: 400px;
 	height: 100px;
-	background-color: #fff;
-	float: left;
+	background-color: white;
+	margin-top: 400px;
+	padding: 0px;
 }
 
 
+	#menu-social li {
+	width: 100px;
+	height: 100px;
+	display: inline;
+	list-style: none;
+	float: left;
+	margin: 0px;
+	}
+	
+#twitter {
+	background-image: url(images/twitter_icon.jpg);
+}
 
+#facebook {
+	background-image: url(images/fb_icon.jpg);
+}
+
+#instagram {
+	background-image: url(images/instagram_icon.jpg);
+}
 
 
 
