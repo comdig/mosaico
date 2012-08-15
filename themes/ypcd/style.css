@@ -9,14 +9,14 @@ body {
   margin: 0 auto;
   padding: 0;
   font-family: helvetica, arial;
-  max-width: 1160px;
+  width: 1200px;
 }
 
 #logo {
 	background-image: url(images/logo.jpg);
 	background-size: cover;
-	width: 306px;
-	height: 306px;
+	width: 400px;
+	height: 400px;
 	background-color: #4A79BF;
 	float: left;
 }
@@ -44,9 +44,9 @@ list-style-type: disc;
 
 .mosaic {
   position: relative;
-  width: 812px;
-  height: 306px;
-  margin-left: 306px;
+  width: 700px;
+  height: 500px;
+  margin-left: 400px;
 }
 
   .hide {
@@ -106,7 +106,7 @@ list-style-type: disc;
 	margin-top: 0px;
 	height: 42px;
 	width: 100%;
-	border-top: 6px solid #293551;
+	border-top: 13px solid #293551;
 }
 
 #menu-principal {
@@ -135,8 +135,8 @@ list-style-type: disc;
 	}
 
 .menu-social-container {
-	width: 306px;
-	height: 42px;
+	width: 400px;
+	height: 100px;
 	background-color: #fff;
 	float: left;
 }
