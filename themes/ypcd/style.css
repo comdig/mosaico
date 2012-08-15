@@ -6,16 +6,47 @@ License: DWTFYW
 */
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: helvetica, arial;
+  max-width: 1160px;
 }
 
+#logo {
+	background-image: url(images/logo.jpg);
+	background-size: cover;
+	width: 306px;
+	height: 306px;
+	background-color: #4A79BF;
+	float: left;
+}
+
+ul, menu, dir {
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 0px;
+}
+
+/* Mosaics */
+
+/*BACKUP
 .mosaic {
   position: relative;
   width: 1160px;
   height: 360px;
   margin: 0 auto;
+}
+*/
+
+.mosaic {
+  position: relative;
+  width: 812px;
+  height: 306px;
+  margin-left: 306px;
 }
 
   .hide {
@@ -51,7 +82,7 @@ body {
     overflow: hidden;
   }
     .instagram img {
-    	float: left;
+	  float: left;
       width: 40px;
     }
 
@@ -64,3 +95,56 @@ body {
   	z-index: 2;
     opacity: .40;
   }
+  
+  
+/* Header */
+
+/*#nav li:before { content:' / '; }
+#nav li:first-child:before { content:''; }*/
+
+.menu-principal-container {
+	margin-top: 0px;
+	height: 42px;
+	width: 100%;
+	border-top: 6px solid #293551;
+}
+
+#menu-principal {
+	position: absolute;
+	margin-top: 12px;
+	font-size: 12px;
+	margin-left: 0px;
+}
+
+	#menu-principal ul {
+		margin-left: 0;
+	}
+	
+	#menu-principal a {
+		color: #000;
+		margin-right: 12px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: lighter;
+	}
+	
+	#menu-principal li {
+		display: inline;
+		list-style: none;
+		float: left;
+	}
+
+.menu-social-container {
+	width: 306px;
+	height: 42px;
+	background-color: #fff;
+	float: left;
+}
+
+
+
+
+
+
+
+

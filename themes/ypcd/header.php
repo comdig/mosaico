@@ -17,11 +17,11 @@
   </head>
   
 	<div id="header">
-		<h1 id="">
-			<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-		</h1>
-		<div class="">
-			<?php wp_nav_menu( array( 'principal' ) ); ?>
+		<?php wp_nav_menu( array( 'principal' ) ); ?>
+
+		<div id="logo">
+			<a href="<?php bloginfo('url'); ?>"></a>
 		</div>
+
 	</div>  
   <body>
