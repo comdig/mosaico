@@ -103,6 +103,7 @@ list-style-type: disc;
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: lighter;
+	padding: 0 6px;
 }
 
 .menu-principal-container {
