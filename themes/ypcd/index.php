@@ -53,6 +53,16 @@
           <div class="instagram"></div>
           <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title(); ?>" />
         </div>
+        
+        <div id="recent-img">recent-img</div>
+        <div id="how-to">how-to</div>
+        
+        <a href="#"><div id="download" class="boxes"><p>BAIXAR MOSAICOS (EM BREVE)</p></div></a>
+        <div id="hash-2" class="boxes"><p>#<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?></p></div>
+        <div id="score" class="boxes"><p>1000 FOTOS ENVIADAS</p></div>
+        
+        
+        
       <?php endwhile; endif; ?>
     <?php wp_reset_query(); ?>
 <?php get_footer(); ?>

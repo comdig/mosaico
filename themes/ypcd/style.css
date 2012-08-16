@@ -175,3 +175,76 @@ list-style-type: none;
 #logo-footer {
 	float: left;
 }
+
+/* ultima pessoa que enviou imagem + instruções rápidas */
+
+#recent-img {
+	background: #293551;
+	width: 660px;
+	height: 60px;
+	padding: 20px;
+	float: left;
+	margin: 50px 0 0 0;
+}
+
+#how-to {
+	background: white;
+	width: 460px;
+	height: 60px;
+	padding: 20px;
+	float: left;
+	margin: 50px 0 0 0;
+}
+
+.boxes {
+	background: white;
+	background-position: left center;
+	background-repeat: no-repeat;
+	float: left;
+	margin: 50px 100px 0 0;	
+	height: 60px;
+	width: 300px;
+	padding: 20px 0;	
+}
+
+	.boxes p {
+		font-size: 16pt;
+		font-weight: lighter;
+		color: black;
+		width: 200px;
+		text-align: center;
+		float: right;
+		text-transform: uppercase;
+	}
+
+#download {
+	background-image: url(images/download-icon.jpg);
+}
+
+	#download p {
+		margin-top: 6px !important;
+		/*REMOVER DEPOIS QUE SAIR O "EM BREVE" */		
+	}
+
+#hash-2 {
+	background-image: url(images/hash-2-icon.jpg);
+}
+	
+#score {
+	background-image: url(images/score-icon.jpg);
+	margin-right: 0 !important;
+	width: 400px !important;
+	float: right !important;
+}
+
+	#score p {
+		width: 300px !important;
+	}
+
+
+
+
+
+
+
+
