@@ -240,7 +240,7 @@ ul, menu, dir {
       font-size: 15px;
       color: #535353;
       text-transform: uppercase;
-      margin: 8px 0 0;
+      margin: 7px 0 0;
     }
 
   #how-to .division {
@@ -294,6 +294,10 @@ ul, menu, dir {
 	#score p {
 		width: 300px !important;
 	}
+
+    #score p span {
+      color: #007cd0;
+    }
 
 #recent-imgs {
 	background: white;
