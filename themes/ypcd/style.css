@@ -24,7 +24,7 @@ body {
 
 ul, menu, dir {
 display: block;
-list-style-type: disc;
+list-style-type: none;
 -webkit-margin-before: 1em;
 -webkit-margin-after: 1em;
 -webkit-margin-start: 0px;
@@ -90,9 +90,6 @@ list-style-type: disc;
   
 /* Header */
 
-/*#nav li:before { content:' / '; }
-#nav li:first-child:before { content:''; }*/
-
 #hash {
 	position: absolute;
 	width: 400px;
@@ -157,3 +154,24 @@ list-style-type: disc;
 #twitter { background-image: url(images/twitter_icon.jpg); }
 #facebook { background-image: url(images/fb_icon.jpg); }
 #instagram { background-image: url(images/instagram_icon.jpg); }
+
+/* Footer */
+
+#footer {
+	background: #293551;
+	width: 1160px;
+	height: 60px;
+	padding: 20px;
+	float: left;
+	margin: 50px 0;
+}
+
+	#footer ul {
+		color: white;
+		margin: auto 0 auto 40px;
+		float: left;
+	}
+
+#logo-footer {
+	float: left;
+}
