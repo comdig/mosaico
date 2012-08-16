@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-    <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+    <?php if (is_singular() && get_option('thread_comments')) wp_enqueue_script('comment-reply'); ?>
     <?php wp_head(); ?>
     
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/jquery.instagram.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/application.js"></script>
   </head>
   
 	<div id="header">
-		<?php wp_nav_menu( array( 'principal' ) ); ?>
+		<?php wp_nav_menu(array('principal')); ?>
 
 		<div id="logo">
 			<a href="<?php bloginfo('url'); ?>"></a>

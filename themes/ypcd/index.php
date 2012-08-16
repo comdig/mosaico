@@ -29,6 +29,7 @@
             function loop(){
               if (i == 15) {
                 clearTimeout(loader);
+                mouseOver();
                 $('.hide').fadeOut(1500);
               } else {
                 var loader = setTimeout(loadImages(), 100);
@@ -39,12 +40,12 @@
         </script>
         
         <p id="hash">#<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?></p>
-		<ul id="menu-social">
-			<li id="twitter"><a href="http://twitter.com"></a></li>
-			<li id="facebook"><a href="http://fb.com"></a></li>
-			<li id="instagram"><a href="http://instagram.com"></a></li>
-			<li id="twitter"><a href="http://twitter.com"></a></li>
-		</ul>
+    		<ul id="menu-social">
+    			<li id="twitter"><a href="http://twitter.com"></a></li>
+    			<li id="facebook"><a href="http://fb.com"></a></li>
+    			<li id="instagram"><a href="http://instagram.com"></a></li>
+    			<li id="twitter"><a href="http://twitter.com"></a></li>
+    		</ul>
 
         <div class="mosaic">
           <div class="hide">
@@ -55,7 +56,27 @@
         </div>
         
         <div id="recent-id"><p>Amelia Lily ACABOU DE ENVIAR UMA IMAGEM</p></div>
-        <div id="how-to">how-to</div>
+        
+        <div id="how-to">
+          <div class="column">
+            <i id="icon-check"></i>
+            <p>Confira a missão</p>
+          </div>
+
+          <div class="division"></div>
+
+          <div class="column">
+            <i id="icon-shot"></i>
+            <p>Fotografe via Instagram</p>
+          </div>
+
+          <div class="division"></div>
+
+          <div class="column">
+            <i id="icon-share"></i>
+            <p>Compartilhe com a #</p>
+          </div>
+        </div>
         
         <a href="#"><div id="download" class="boxes"><p>BAIXAR MOSAICOS (EM BREVE)</p></div></a>
         <div id="hash-2" class="boxes"><p>#<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?></p></div>
