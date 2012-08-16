@@ -37,6 +37,17 @@
             }
 
           });
+
+          $.getJSON("https://api.instagram.com/v1/tags/youpix/media/recent?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
+              {},
+              function (data) {
+                $.each(data.data, function(i, data) {
+                  console.log(data.caption.from.full_name);
+                  $('#recent-id p span').html(data.caption.from.full_name);
+                  if (i == 0) return false;
+                });  
+              }
+          );
         </script>
         
         <p id="hash">#<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?></p>
@@ -55,7 +66,7 @@
           <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title(); ?>" />
         </div>
         
-        <div id="recent-id"><p>Amelia Lily ACABOU DE ENVIAR UMA IMAGEM</p></div>
+        <div id="recent-id"><p><span>Amelia Lily</span> ACABOU DE ENVIAR UMA IMAGEM</p></div>
         
         <div id="how-to">
           <div class="column">

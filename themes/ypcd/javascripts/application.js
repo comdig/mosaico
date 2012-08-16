@@ -8,5 +8,5 @@ $(document).ready(function() {
         $(this).stop().animate({ opacity: 0.6 }, 200);
       }
     )
-  }
+  };
 });
