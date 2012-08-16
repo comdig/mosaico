@@ -38,7 +38,9 @@
 
           });
 
-          $.getJSON("https://api.instagram.com/v1/tags/youpix/media/recent?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
+          var hash = '<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?>';
+
+          $.getJSON("https://api.instagram.com/v1/tags/"+ hash + "/media/recent?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
               {},
               function (data) {
                 $.each(data.data, function(i, data) {
@@ -48,7 +50,7 @@
               }
           );
 
-          $.getJSON("https://api.instagram.com/v1/tags/youpix?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
+          $.getJSON("https://api.instagram.com/v1/tags/"+ hash + "?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
               {},
               function (data) {
                 $('#score p span').html(data.data.media_count);
