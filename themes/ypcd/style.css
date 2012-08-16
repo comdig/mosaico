@@ -74,8 +74,16 @@ list-style-type: none;
   }
     .instagram img {
 	  float: left;
-      width: 40px;
+      width: 50px;
       opacity: .60;
+    }
+    
+  .recent {
+	  max-height: 600px;
+  }
+    .recent img {
+      width: 200px !important;
+      opacity: 1 !important;
     }
 
   .mask {
@@ -178,14 +186,27 @@ list-style-type: none;
 
 /* ultima pessoa que enviou imagem + instruções rápidas */
 
-#recent-img {
+#recent-id {
 	background: #293551;
+	background-image: url(images/recent-id-icon.jpg);
+	background-position: left center;
+	background-repeat: no-repeat;
 	width: 660px;
 	height: 60px;
 	padding: 20px;
 	float: left;
 	margin: 50px 0 0 0;
 }
+	
+	#recent-id p {
+		font-size: 14pt;
+		font-weight: lighter;
+		color: white;
+		width: 560px;
+		float: left;
+		text-transform: uppercase;
+		margin-left: 120px
+	}
 
 #how-to {
 	background: white;
@@ -208,7 +229,7 @@ list-style-type: none;
 }
 
 	.boxes p {
-		font-size: 16pt;
+		font-size: 14pt;
 		font-weight: lighter;
 		color: black;
 		width: 200px;
@@ -241,6 +262,27 @@ list-style-type: none;
 		width: 300px !important;
 	}
 
+#recent-imgs {
+	background: white;
+	background-image: url(images/recent-img-icon.jpg);
+	background-position: left center;
+	background-repeat: no-repeat;
+	width: 660px;
+	height: 60px;
+	padding: 20px;
+	float: left;
+	margin: 50px 0 0 0;
+}
+
+	#recent-imgs p {
+		font-size: 14pt;
+		font-weight: lighter;
+		color: black;
+		width: 560px;
+		float: left;
+		text-transform: uppercase;
+		margin-left: 120px
+	}
 
 
 
