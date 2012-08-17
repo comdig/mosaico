@@ -285,6 +285,10 @@ ul, menu, dir {
 	background-image: url(images/download-icon.jpg);
 }
 
+#download:hover {
+	background-image: url(images/download-icon-hover.jpg);
+}
+
 	#download p {
 		margin-top: 6px !important;
 		/*REMOVER DEPOIS QUE SAIR O "EM BREVE" */		
