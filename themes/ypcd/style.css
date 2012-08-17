@@ -202,6 +202,9 @@ ul, menu, dir {
 		text-decoration: underline;
 	}
 
+  #footer .copyright {
+    float: right;
+  }
 	
 #logo-footer {
 	float: left;
