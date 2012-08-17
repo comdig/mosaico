@@ -13,18 +13,14 @@
 <footer id="footer">
 <img id="logo-footer" src="<?php bloginfo('template_url'); ?>/images/logo_footer.png" alt="logo_footer" width="170" height="63" />
 <ul>
-<li>Sobre</li>
-<li>Missões</li>
+<li><a href="http://mosaico.comdig.info/?page_id=21">Sobre</a></li>
+<li><a href="http://mosaico.comdig.info/?page_id=19">Missões</a></li>
+<li><a href="http://mosaico.comdig.info/?page_id=23">Como Funciona?</a></li>
 </ul>
 <ul>
-<li>Como Funciona?</li>
-<li>Facebook</li>
-<li>Contato</li>
-</ul>
-<ul>
-<li>FAQ</li>
-<li>Termos e Condições</li>
-<li>Política de Privacidade</li>
+<li><a href="http://twitter.com/comdig" target="_blank">Twitter</a></li>
+<li><a href="http://facebook.com/comdig" target="_blank">Facebook</a></li>
+<li><a href="http://youtube.com/user/comunicacaodigital" target="_blank">Youtube</a></li>
 </ul>
 </footer>
 </body>

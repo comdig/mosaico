@@ -172,6 +172,9 @@ ul, menu, dir {
 .instagram-icon { background-image: url(images/instagram_icon.jpg); }
 .instagram-icon:hover { background-image: url(images/instagram_icon_hover.jpg); }
 
+.youtube { background-image: url(images/youtube_icon.jpg) }
+.youtube:hover { background-image: url(images/youtube_icon_hover.jpg) }
+
 /* Footer */
 
 #footer {
@@ -188,7 +191,18 @@ ul, menu, dir {
 		margin: auto 0 auto 40px;
 		float: left;
 	}
+	
+	#footer li a {
+		color: white;
+		text-decoration: none;
+	}
+	
+	#footer li a:hover {
+		color: white;
+		text-decoration: underline;
+	}
 
+	
 #logo-footer {
 	float: left;
 }
@@ -282,6 +296,10 @@ ul, menu, dir {
 	background-image: url(images/download-icon.jpg);
 }
 
+#download:hover {
+	background-image: url(images/download-icon-hover.jpg);
+}
+
 	#download p {
 		margin-top: 6px !important;
 		/*REMOVER DEPOIS QUE SAIR O "EM BREVE" */		
@@ -329,7 +347,7 @@ ul, menu, dir {
 	}
 
 #inner-content {
-  background: #ededef;
+  background: #fff;
   min-height: 320px;
   float: left;
   padding: 40px;
