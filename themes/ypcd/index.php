@@ -71,7 +71,7 @@
             <p>Calma aí, o seu mosaico está sendo carregado...</p>
           </div>
           <div class="instagram"></div>
-          <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title(); ?>" />
+          <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" />
         </div>
         
         <div id="recent-id"><p><span>Amelia Lily</span> ACABOU DE ENVIAR UMA IMAGEM</p></div>
