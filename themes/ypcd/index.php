@@ -31,6 +31,10 @@
                 clearTimeout(loader);
                 mouseOver();
                 $('.hide').fadeOut(1500);
+              } else if (insta_next_url == undefined) {
+                clearTimeout(loader);
+                mouseOver();
+                $('.hide').fadeOut(1500);
               } else {
                 var loader = setTimeout(loadImages(), 100);
               }
@@ -71,7 +75,9 @@
             <p>Calma aí, o seu mosaico está sendo carregado...</p>
           </div>
           <div class="instagram"></div>
-          <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" />
+          <?php if(has_post_thumbnail()) { ?>
+            <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" />
+          <?php } ?>
         </div>
         
         <div id="recent-id"><p><span>Amelia Lily</span> ACABOU DE ENVIAR UMA IMAGEM</p></div>

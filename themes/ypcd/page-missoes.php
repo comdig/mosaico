@@ -32,14 +32,19 @@ get_header(); ?>
 	          }
 	        });
 	
-	        function loop(){
-	          if (i == 15) {
-	            clearTimeout(loader);
-	            $('.hide').fadeOut(1500);
-	          } else {
-	            var loader = setTimeout(loadImages(), 100);
-	          }
-	        }
+          function loop(){
+            if (i == 15) {
+              clearTimeout(loader);
+              mouseOver();
+              $('.hide').fadeOut(1500);
+            } else if (insta_next_url == undefined) {
+              clearTimeout(loader);
+              mouseOver();
+              $('.hide').fadeOut(1500);
+            } else {
+              var loader = setTimeout(loadImages(), 100);
+            }
+          }
 	
 	      });
 	    </script>
@@ -52,7 +57,9 @@ get_header(); ?>
 						<h2 id="post-<?php the_ID(); ?>">#<?php the_title();?></h2>
 					</div>
           <div class="instagram"></div>
-          <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" />
+          <?php if(has_post_thumbnail()) { ?>
+            <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" />
+          <?php } ?>
         </div>
       <?php endwhile; endif; ?>
     <?php wp_reset_query(); ?>
