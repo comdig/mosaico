@@ -345,7 +345,21 @@ ul, menu, dir {
     font-size: 13px;
   }
 
+#missions-list .post {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 9999;
+  background: rgba(62, 123, 183, .9);
+  padding: 0 25px;
+  color: white;
+  min-width: 100px;
+  text-align: center;
+  line-height: 10px;
+}
 
-
+#missions-list .mosaic {
+  margin: 0 0 20px;
+}
 
 
