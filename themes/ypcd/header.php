@@ -3,7 +3,11 @@
   <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
 
-    <title><?php wp_title(); ?></title>
+    <title>Instant Mosaico <?php wp_title(); ?></title>
+
+    <meta property="og:image" content="http://instantmosaico.comdig.info/wp-content/themes/ypcd/images/instant-mosaico-fb.png"/>
+    <meta property="og:title" content="Instant Mosaico"/>
+    <meta property="og:description" content="O Instant Mosaico é a união da paixão pela fotografia e a tecnologia. O resultado é um site que junta as imagens publicadas via Instagram utilizando uma # em um divertido mosaico de memórias."
 
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
