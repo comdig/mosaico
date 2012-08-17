@@ -5,7 +5,7 @@ $(document).ready(function() {
         $(this).animate({ opacity: 1 }, 200);
       },
       function() {
-        $(this).animate({ opacity: 0.6 }, 600);
+        $(this).animate({ opacity: 0.7 }, 600);
       }
     )
   };
