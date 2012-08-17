@@ -64,10 +64,10 @@
         
         <p id="hash">#<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?></p>
     		<div id="menu-social">
-    			<a href="http://twitter.com/" class="twitter"></a>
-    			<a href="http://facebook.com/" class="facebook"></a>
-    			<a href="http://instagram.com/" class="instagram-icon"></a>
-    			<a href="http://twitter.com/" class="twitter"></a>
+    			<a href="http://twitter.com/comdig" target="_blank" title="Twitter da ComDig" class="twitter"></a>
+    			<a href="http://facebook.com/comdig" target="_blank" title="Facebook da ComDig" class="facebook"></a>
+    			<a href="http://instagram.com/" target="_blank" title="Instagram da ComDig" class="instagram-icon"></a>
+    			<a href="http://www.youtube.com/user/comunicacaodigital" target="_blank" title="Youtube da ComDig" class="youtube"></a>
     		</div>
 
         <div class="mosaic">

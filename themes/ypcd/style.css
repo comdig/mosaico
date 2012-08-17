@@ -172,6 +172,9 @@ ul, menu, dir {
 .instagram-icon { background-image: url(images/instagram_icon.jpg); }
 .instagram-icon:hover { background-image: url(images/instagram_icon_hover.jpg); }
 
+.youtube { background-image: url(images/youtube_icon.jpg) }
+.youtube:hover { background-image: url(images/youtube_icon_hover.jpg) }
+
 /* Footer */
 
 #footer {

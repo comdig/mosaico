@@ -1,7 +1,7 @@
 <?php
 /**
 * Template Name: Página de missões
-* Description: Lista de todas as missões já executada.
+* Description: Lista de todas as missões já executadas.
 */
 get_header(); ?>
 
