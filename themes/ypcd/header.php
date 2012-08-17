@@ -18,10 +18,7 @@
   </head>
   
 	<div id="header">
-		<?php wp_nav_menu(array('principal')); ?>
-
-		<div id="logo">
-			<a href="<?php bloginfo('url'); ?>"></a>
-		</div>
+		<?php wp_nav_menu(array('principal')); ?>		
+		<a href="<?php bloginfo('url'); ?>"><div id="logo"></div></a>
 	</div>
 	<body>
