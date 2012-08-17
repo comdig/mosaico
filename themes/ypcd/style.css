@@ -191,7 +191,18 @@ ul, menu, dir {
 		margin: auto 0 auto 40px;
 		float: left;
 	}
+	
+	#footer li a {
+		color: white;
+		text-decoration: none;
+	}
+	
+	#footer li a:hover {
+		color: white;
+		text-decoration: underline;
+	}
 
+	
 #logo-footer {
 	float: left;
 }
