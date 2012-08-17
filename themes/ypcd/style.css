@@ -328,7 +328,22 @@ ul, menu, dir {
 		margin-left: 120px
 	}
 
+#inner-content {
+  background: #ededef;
+  min-height: 320px;
+  float: left;
+  padding: 40px;
+  width: 720px;
+}
+  
+  #inner-content h2 {
+    margin-top: 0;
+  }
 
+  #inner-content p {
+    line-height: 22px;
+    font-size: 13px;
+  }
 
 
 
