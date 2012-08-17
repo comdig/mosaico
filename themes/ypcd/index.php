@@ -59,16 +59,16 @@
         </script>
         
         <p id="hash">#<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?></p>
-    		<ul id="menu-social">
-    			<li id="twitter"><a href="http://twitter.com"></a></li>
-    			<li id="facebook"><a href="http://fb.com"></a></li>
-    			<li id="instagram"><a href="http://instagram.com"></a></li>
-    			<li id="twitter"><a href="http://twitter.com"></a></li>
-    		</ul>
+    		<div id="menu-social">
+    			<a href="http://twitter.com/" class="twitter"></a>
+    			<a href="http://facebook.com/" class="facebook"></a>
+    			<a href="http://instagram.com/" class="instagram-icon"></a>
+    			<a href="http://twitter.com/" class="twitter"></a>
+    		</div>
 
         <div class="mosaic">
           <div class="hide">
-            <p>Calma aí, o seu mosaico está sendo carregado.</p>
+            <p>Calma aí, o seu mosaico está sendo carregado...</p>
           </div>
           <div class="instagram"></div>
           <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title(); ?>" />

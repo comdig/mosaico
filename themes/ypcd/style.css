@@ -5,10 +5,12 @@ Author: Bruno Stein, Jeferson Braun
 License: DWTFYW
 */
 
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400);
+
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: GillSans, Helvetica, Arial;
+  font-family: 'Source Sans Pro', sans-serif;
   width: 1200px;
   background: #ededed;
 }
@@ -152,18 +154,23 @@ ul, menu, dir {
 	padding: 0px;
 }
 
-	#menu-social li {
+	#menu-social a {
   	width: 100px;
   	height: 100px;
   	display: inline;
   	list-style: none;
   	float: left;
-  	margin: 0px;
+  	border: none;
 	}
 	
-#twitter { background-image: url(images/twitter_icon.jpg); }
-#facebook { background-image: url(images/fb_icon.jpg); }
-#instagram { background-image: url(images/instagram_icon.jpg); }
+.twitter { background-image: url(images/twitter_icon.jpg); }
+.twitter:hover { background-image: url(images/twitter_icon_hover.jpg); }
+
+.facebook { background-image: url(images/fb_icon.jpg); }
+.facebook:hover { background-image: url(images/fb_icon_hover.jpg); }
+
+.instagram-icon { background-image: url(images/instagram_icon.jpg); }
+.instagram-icon:hover { background-image: url(images/instagram_icon_hover.jpg); }
 
 /* Footer */
 
