@@ -52,7 +52,7 @@ get_header(); ?>
 						<h2 id="post-<?php the_ID(); ?>">#<?php the_title();?></h2>
 					</div>
           <div class="instagram"></div>
-          <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title(); ?>" />
+          <img class="mask" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" />
         </div>
       <?php endwhile; endif; ?>
     <?php wp_reset_query(); ?>
