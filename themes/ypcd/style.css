@@ -78,7 +78,12 @@ ul, menu, dir {
       float: left;
       width: 50px;
       opacity: 0.7;
+      transition: opacity 0.2s;
+      -moz-transition: opacity 0.2s;
+      -webkit-transition: opacity 0.2s;
+      -o-transition: opacity 0.2s;
     }
+      .instagram-image:hover { opacity: 1; }
     
   .recent {
 	  max-height: 600px;

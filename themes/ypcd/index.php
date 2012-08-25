@@ -5,56 +5,11 @@
         <script type="text/javascript">
           $(function(){
             var hash = '<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?>';
+            var access_token = '198463187.f59def8.88c55f5fc8b444478907f7c441d385e3';
 
-            recentImages = function() {
-              $.getJSON("https://api.instagram.com/v1/tags/"+ hash + "/media/recent?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
-                {},
-                function (data) {
-                  $.each(data.data, function(i, data) {
-                    $('#recent-id p span').html(data.caption.from.full_name);
-                    if (i == 0) return false;
-                  });  
-                }
-              );
-            };
-
-            totalImages = function() {
-              $.getJSON("https://api.instagram.com/v1/tags/"+ hash + "?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
-                {},
-                function (data) {
-                  $('#score p span').html(data.data.media_count);
-                }
-              );
-            };
-
-            loadMosaic = function(next_url, count) {
-              var count = 0;
-
-              $.getJSON(next_url,
-                {},
-                function (data) {
-                  $.each(data.data, function(i, data) {
-                    $('.instagram').append(
-                      '<div class="instagram-placeholder"><a href="'+ data.link +'" target="_blank"><img class="instagram-image" src="'+ data.images.thumbnail.url +'" /></a></div>'
-                    );
-
-                    console.log(i);
-
-                    if (i == 16) {
-                      loadMosaic(pagination.next_url, count + 1);
-                    }
-                  });
-
-                  //if (count == 3) {
-                  //  return false;
-                  //}
-                }
-              );
-            };
-
-            loadMosaic("https://api.instagram.com/v1/tags/"+ hash + "/media/recent?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 1);
-            recentImages();
-            totalImages();
+            loadMosaic("https://api.instagram.com/v1/tags/"+ hash + "/media/recent?access_token="+ access_token, hash, access_token);
+            recentImages(hash, access_token);
+            totalImages(hash, access_token);
           });
         </script>
         
@@ -76,7 +31,7 @@
           <?php } ?>
         </div>
         
-        <div id="recent-id"><p><span>Amelia Lily</span> ACABOU DE ENVIAR UMA IMAGEM</p></div>
+        <div id="recent-id"><p><span></span> ACABOU DE ENVIAR UMA IMAGEM</p></div>
         
         <div id="how-to">
           <div class="column">
@@ -101,7 +56,7 @@
         
         <a href="#"><div id="download" class="boxes"><p>BAIXAR MOSAICOS (EM BREVE)</p></div></a>
         <div id="hash-2" class="boxes"><p>#<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?></p></div>
-        <div id="score" class="boxes"><p><span>(número)</span> FOTOS ENVIADAS</p></div>
+        <div id="score" class="boxes"><p><span></span> FOTOS ENVIADAS</p></div>
         
         <div id="recent-imgs"><p>FOTOS RECENTES</p></div>
         <div class="instagram recent"></div>
