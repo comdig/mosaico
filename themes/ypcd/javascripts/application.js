@@ -41,7 +41,6 @@ loadMosaic = function(next_url, hash, access_token) {
         loadMosaic(data.pagination.next_url);
       } else {
         $('.hide').fadeOut(1000);
-        //mouseOver();
       }
     }
   });

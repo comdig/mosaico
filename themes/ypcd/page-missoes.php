@@ -35,11 +35,9 @@ get_header(); ?>
           function loop(){
             if (i == 15) {
               clearTimeout(loader);
-              mouseOver();
               $('.hide').fadeOut(1500);
             } else if (insta_next_url == undefined) {
               clearTimeout(loader);
-              mouseOver();
               $('.hide').fadeOut(1500);
             } else {
               var loader = setTimeout(loadImages(), 100);
