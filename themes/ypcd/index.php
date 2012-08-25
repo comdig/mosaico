@@ -40,26 +40,60 @@
               }
             }
 
+            var hash = '<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?>';
+
+            recentImages = function() {
+              $.getJSON("https://api.instagram.com/v1/tags/"+ hash + "/media/recent?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
+                {},
+                function (data) {
+                  $.each(data.data, function(i, data) {
+                    $('#recent-id p span').html(data.caption.from.full_name);
+                    if (i == 0) return false;
+                  });  
+                }
+              );
+            };
+
+            totalImages = function() {
+              $.getJSON("https://api.instagram.com/v1/tags/"+ hash + "?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
+                {},
+                function (data) {
+                  $('#score p span').html(data.data.media_count);
+                }
+              );
+            };
+
+            loadMosaic = function(next_url, count) {
+              var count = 0;
+
+              $.getJSON(nexturl,
+                {},
+                function (data) {
+                  $.each(data.data, function(i, data) {
+                    $('.instagram').append(
+                      '<div class="instagram-placeholder"><a href="'+ data.link +'" target="_blank"><img class="instagram-image" src="'+ data.images.thumbnail.url +'" /></a></div>'
+                    );
+
+                    if (i == 20) {
+                      loadMosaic(pagination.next_url);
+                      i = 0;
+                    }
+                  });
+
+                  if (count != 3) {
+                    count = count + 1;
+                  } else {
+                    return false;
+                  }
+                }
+              );
+            };
+
+            //loadMosaic("https://api.instagram.com/v1/tags/"+ hash + "/media/recent?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?");
+            recentImages();
+            totalImages();
+
           });
-
-          var hash = '<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?>';
-
-          $.getJSON("https://api.instagram.com/v1/tags/"+ hash + "/media/recent?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
-              {},
-              function (data) {
-                $.each(data.data, function(i, data) {
-                  $('#recent-id p span').html(data.caption.from.full_name);
-                  if (i == 0) return false;
-                });  
-              }
-          );
-
-          $.getJSON("https://api.instagram.com/v1/tags/"+ hash + "?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 
-              {},
-              function (data) {
-                $('#score p span').html(data.data.media_count);
-              }
-          );
         </script>
         
         <p id="hash">#<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?></p>
