@@ -4,42 +4,6 @@
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <script type="text/javascript">
           $(function(){
-
-            var insta_container = $(".instagram"), insta_next_url, i = 1;
-
-            function loadImages(){
-              insta_container.instagram({
-                next_url : insta_next_url,
-                show : 20,
-                onComplete : function(photos, data) {
-                  insta_next_url = data.pagination.next_url, i++, loop()
-                }
-              })
-            };
-
-            insta_container.instagram({
-              hash: '<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?>',
-              clientId : '9ea65159a89141ceab09c004b157c5cd',
-              show : 20,
-              onComplete : function (photos, data) {
-                insta_next_url = data.pagination.next_url, loadImages()
-              }
-            });
-
-            function loop(){
-              if (i == 15) {
-                clearTimeout(loader);
-                mouseOver();
-                $('.hide').fadeOut(1500);
-              } else if (insta_next_url == undefined) {
-                clearTimeout(loader);
-                mouseOver();
-                $('.hide').fadeOut(1500);
-              } else {
-                var loader = setTimeout(loadImages(), 100);
-              }
-            }
-
             var hash = '<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?>';
 
             recentImages = function() {
@@ -66,7 +30,7 @@
             loadMosaic = function(next_url, count) {
               var count = 0;
 
-              $.getJSON(nexturl,
+              $.getJSON(next_url,
                 {},
                 function (data) {
                   $.each(data.data, function(i, data) {
@@ -74,25 +38,23 @@
                       '<div class="instagram-placeholder"><a href="'+ data.link +'" target="_blank"><img class="instagram-image" src="'+ data.images.thumbnail.url +'" /></a></div>'
                     );
 
-                    if (i == 20) {
-                      loadMosaic(pagination.next_url);
-                      i = 0;
+                    console.log(i);
+
+                    if (i == 16) {
+                      loadMosaic(pagination.next_url, count + 1);
                     }
                   });
 
-                  if (count != 3) {
-                    count = count + 1;
-                  } else {
-                    return false;
-                  }
+                  //if (count == 3) {
+                  //  return false;
+                  //}
                 }
               );
             };
 
-            //loadMosaic("https://api.instagram.com/v1/tags/"+ hash + "/media/recent?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?");
+            loadMosaic("https://api.instagram.com/v1/tags/"+ hash + "/media/recent?access_token=198463187.f59def8.88c55f5fc8b444478907f7c441d385e3&callback=?", 1);
             recentImages();
             totalImages();
-
           });
         </script>
         
