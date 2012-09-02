@@ -1,5 +1,6 @@
   <?php get_header(); ?>
   			
+    <?php query_posts(array('posts_per_page' => 1, 'post_type' => 'ypcd_missoes')); ?>
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <script type="text/javascript">
           $(function(){
@@ -61,4 +62,5 @@
         <div class="instagram recent"></div>
         
       <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>
 <?php get_footer(); ?>

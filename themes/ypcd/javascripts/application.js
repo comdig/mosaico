@@ -19,9 +19,9 @@ totalImages = function(hash, access_token) {
   );
 };
 
-loadMosaic = function(next_url, hash, access_token) {
-  var count = 0;
+var count = 0;
 
+loadMosaic = function(next_url, hash, access_token) {
   $.ajax({
     method: "GET",
     url: next_url,
@@ -39,6 +39,7 @@ loadMosaic = function(next_url, hash, access_token) {
 
       if (data.pagination.next_url && count <=160) {
         loadMosaic(data.pagination.next_url);
+        console.log(count);
       } else {
         $('.hide').fadeOut(1000);
       }

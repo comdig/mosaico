@@ -50,7 +50,7 @@ ul, menu, dir {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #3e7bb8;
+    background: #293551;
     z-index: 3;
   }
     .hide p {
@@ -371,6 +371,56 @@ ul, menu, dir {
     font-size: 13px;
   }
 
+#missions-list {
+  float: left;
+  margin: 0;
+  width: 800px;
+}
+
+  #missions-list li {
+    display: block;
+    background: #293551;
+    padding: 20px;
+    margin-bottom: 2px;
+    position: relative;
+  }
+
+  #missions-list h2 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  #missions-list p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  #missions-list .button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 100px;
+    line-height: 50px;
+    height: 50px;
+    background: #4A79BF;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-align: center;
+    display: block;
+  }
+
+  #missions-list li:hover .button {
+    background: #3C66A3;
+  }
+
+  #missions-list a {
+    color: #fff;
+    text-decoration: none;
+  }
+
 #missions-list .post {
   position: absolute;
   top: 50px;
@@ -387,5 +437,3 @@ ul, menu, dir {
 #missions-list .mosaic {
   margin: 0 0 20px;
 }
-
-
