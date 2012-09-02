@@ -39,7 +39,6 @@ loadMosaic = function(next_url, hash, access_token) {
 
       if (data.pagination.next_url && count <=160) {
         loadMosaic(data.pagination.next_url);
-        console.log(count);
       } else {
         $('.hide').fadeOut(1000);
       }

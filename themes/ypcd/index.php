@@ -54,10 +54,10 @@
         </div>
         
         <a href="#"><div id="download" class="boxes"><p>BAIXAR MOSAICOS (EM BREVE)</p></div></a>
+        <div id="recent-imgs" class="boxes"><p>FOTOS RECENTES</p></div>
         <div id="hash-2" class="boxes"><p>#<?php global $post; $custom = get_post_custom($post->ID); $hashtag = $custom["hashtag"][0]; echo $hashtag; ?></p></div>
         <div id="score" class="boxes"><p><span></span> FOTOS ENVIADAS</p></div>
         
-        <div id="recent-imgs"><p>FOTOS RECENTES</p></div>
         <div class="instagram recent"></div>
         
       <?php endwhile; endif; ?>

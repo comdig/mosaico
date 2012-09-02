@@ -302,6 +302,9 @@ ul, menu, dir {
 
 #download {
 	background-image: url(images/download-icon.jpg);
+
+  /* JUST FOR NOW */
+  display: none;
 }
 
 #download:hover {
@@ -337,21 +340,21 @@ ul, menu, dir {
 	background-image: url(images/recent-img-icon.jpg);
 	background-position: left center;
 	background-repeat: no-repeat;
-	width: 660px;
+	/*width: 660px;
 	height: 60px;
 	padding: 20px;
 	float: left;
-	margin: 50px 0 0 0;
+	margin: 50px 0 0 0;*/
 }
 
 	#recent-imgs p {
 		font-size: 14pt;
 		font-weight: lighter;
 		color: black;
-		width: 560px;
+		width: 400px;
 		float: left;
 		text-transform: uppercase;
-		margin-left: 120px
+		/*margin-left: 120px;*/
 	}
 
 #inner-content {
